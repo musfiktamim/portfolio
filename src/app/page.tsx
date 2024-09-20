@@ -1,7 +1,9 @@
+import Typed from "./Component/Typed"
+
 function page() {
   return (
-    <div>
-      Home
+    <div className="h-full w-full">
+      <Typed />
     </div>
   )
 }
