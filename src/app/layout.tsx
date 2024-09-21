@@ -34,7 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      // ${geistSans.variable} antialiased ${geistMono.variable}
+        className={` text-white bg-black`}
       >
 
         <div className="w-[100%] h-[100vh] gap-2 px-2 flex items-center">
