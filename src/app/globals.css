@@ -84,7 +84,7 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border selection:bg-white selection:text-red-700;
   }
   body {
     @apply bg-background text-foreground;
