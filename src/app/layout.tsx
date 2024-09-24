@@ -70,7 +70,7 @@ export default function RootLayout({
                 <Link href={'/project'}>Project</Link>
                 <Link href={'/services'}>Services</Link>
             </div>
-            <main className="bg-[#27272A] px-2 py-2 overflow-y-auto h-full rounded-md">
+            <main className="bg-[#27272A] overflow-y-auto h-full rounded-md">
               {children}
             </main>
           </div>

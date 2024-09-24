@@ -2,7 +2,7 @@ import Typed from "./Component/Typed"
 
 function page() {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full flex items-center justify-center">
       <Typed />
     </div>
   )
