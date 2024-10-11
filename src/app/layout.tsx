@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
-
 import Image from "next/image"
 import myImage from "../../public/frontend_image/my_image.jpg";
 import Fiverfavicon from "../../public/frontend_image/favicon.ico";
@@ -11,16 +10,16 @@ import Instagram from "../../public/frontend_image/instagrame.ico"
 import Link from "next/link";
 import Hamburger from "../../public/frontend_image/burger.png"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -43,7 +42,7 @@ export default function RootLayout({
         <div className="w-[100%] h-[100vh] gap-2 relative px-2 flex items-center">
           <div className="w-[350px] gap-y-2 absolute md:static z-50 md:translate-x-0 translate-x-[-500px] rounded-lg bg-[#27272A] h-[90vh]">
             <div className="w-[160px] h-[160px] overflow-hidden m-auto mt-4 rounded-2xl hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transition-all duration-150 ">
-              <Image src={myImage} className="h-full w-full" alt="my image" />
+              <Image src={myImage} className="h-full w-full" alt="my image"   />
             </div>
             <div className="flex mt-8 gap-y-2 w-full flex-col list-none">
               <li className="w-[90%] m-auto h-12 rounded-md flex items-center text-[#ffffff] justify-center bg-[#212121] ">Musfikur Rahman</li>
