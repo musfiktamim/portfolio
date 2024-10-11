@@ -9,6 +9,7 @@ import GithubIcon from "../../public/frontend_image/favicon-dark.png";
 import Facebook from "../../public/frontend_image/facebook.ico";
 import Instagram from "../../public/frontend_image/instagrame.ico"
 import Link from "next/link";
+import Hamburger from "../../public/frontend_image/burger.png"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +32,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
@@ -38,8 +40,8 @@ export default function RootLayout({
         className={` text-white bg-black`}
       >
 
-        <div className="w-[100%] h-[100vh] gap-2 px-2 flex items-center">
-          <div className="w-[350px] gap-y-2 rounded-lg bg-[#27272A] h-[90vh]">
+        <div className="w-[100%] h-[100vh] gap-2 relative px-2 flex items-center">
+          <div className="w-[350px] gap-y-2 absolute md:static z-50 md:translate-x-0 translate-x-[-500px] rounded-lg bg-[#27272A] h-[90vh]">
             <div className="w-[160px] h-[160px] overflow-hidden m-auto mt-4 rounded-2xl hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transition-all duration-150 ">
               <Image src={myImage} className="h-full w-full" alt="my image" />
             </div>
@@ -64,13 +66,18 @@ export default function RootLayout({
             </div>
           </div>
           <div className="h-[90vh] flex gap-y-2 flex-col w-full">
-            <div className="h-12 flex items-center gap-3 justify-center rounded-md bg-[#27272A]">
-                <Link href={'/'}>Home</Link>
-                <Link href={'/about'}>About</Link>
-                <Link href={'/project'}>Project</Link>
-                <Link href={'/services'}>Services</Link>
+            <div className="h-12 flex items-center gap-3 md:justify-center justify-between rounded-md bg-[#27272A]">
+                <div className="md:hidden h-[100%] w-[50px]">
+                  <Image src={Hamburger} alt="hello" className="h-[100%] w-[100px]" />
+                </div>
+                <div className="flex w-[90%] items-center gap-3 md:justify-center justify-center">
+                  <Link href={'/'}>Home</Link>
+                  <Link href={'/about'}>About</Link>
+                  <Link href={'/project'}>Project</Link>
+                  <Link href={'/services'}>Services</Link>
+                </div>
             </div>
-            <main className="bg-[#27272A] overflow-y-auto h-full rounded-md">
+            <main className="bg-[#27272A] md:h-[100%]  overflow-y-auto h-auto rounded-md">
               {children}
             </main>
           </div>
